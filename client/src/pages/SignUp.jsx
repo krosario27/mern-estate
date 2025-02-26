@@ -27,20 +27,21 @@ export default function SignUp() {
       });
 
       const data = await res.json();
-      if(data.success === false) {
+
+      if (data.success === false) {
         setError(data.message);
         setLoading(false);
         return
       }
+
       setLoading(false);
       setError(null);
       navigate('/sign-in');
+
     } catch (error) {
       setLoading(false);
       setError(error.message);
     }
-    
-    
   };
 
 
