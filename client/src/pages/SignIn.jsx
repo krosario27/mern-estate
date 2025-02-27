@@ -65,8 +65,8 @@ export default function SignIn() {
         id='password' 
         onChange={handleChange}/>
 
-        <button disabled={loading}className='bg-yellow-600 text-white p-3 rounded-lg uppercase 
-        hover:opacity-95 font-semibold disable:opacity-80'
+        <button disabled={loading} className='bg-yellow-600 text-white p-3 rounded-lg uppercase 
+        hover:opacity-95 font-semibold disable:opacity-80 cursor-pointer'
         >
           {loading ? 'Loading...' : 'Sign In'}
         </button>
@@ -77,7 +77,7 @@ export default function SignIn() {
       <div className='flex gap-2 mt-5'>
         <p>Dont Have an account?</p>
         <Link to={"/sign-up"}>
-          <span className='text-blue-700'>Sign Up</span>
+          <span className='text-blue-700 cursor-pointer'>Sign Up</span>
         </Link>
       </div>
       {error && <p className='text-red-500 text-center mt-5'>{error}</p>}
