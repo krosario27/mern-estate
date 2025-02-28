@@ -77,9 +77,9 @@ export default function Profile() {
           )}
         </p>
 
-        <input type='text' placeholder='Username' id='username' className='border p-3 rounded-lg'/>
-        <input type='email' placeholder='Email' id='email' className='border p-3 rounded-lg'/>
-        <input type='text' placeholder='Password' id='password' className='border p-3 rounded-lg'/>
+        <input type='text' placeholder='Username' id='username' className='border p-3 rounded-lg focus:outline-none'/>
+        <input type='email' placeholder='Email' id='email' className='border p-3 rounded-lg focus:outline-none'/>
+        <input type='text' placeholder='Password' id='password' className='border p-3 rounded-lg focus:outline-none'/>
 
         <button className='bg-yellow-600 text-white rounded-lg p-3 uppercase 
         hover:opacity-95 disabled:opacity-80 cursor-pointer'
