@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 import { useRef, useState, useEffect } from 'react'
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { app } from '../firebase';
+import { Link } from 'react-router-dom';
 
 import { 
   updateUserStart, 
@@ -198,11 +199,16 @@ export default function Profile() {
 
         <button 
           disabled={loading} 
-          className='bg-yellow-600 text-white rounded-lg p-3 uppercase 
+          className='bg-yellow-600 text-white rounded-lg p-3 uppercase font-semibold
           hover:opacity-95 disabled:opacity-80 cursor-pointer'
         >
           {loading ? 'Loading...' : 'Update'}
         </button>
+
+        <Link className='bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95' to={"/create-listing"}>
+          Create Listing
+        </Link>
+        
       
       </form>
 
