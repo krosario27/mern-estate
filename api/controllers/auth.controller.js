@@ -86,4 +86,4 @@ export const signout = (req, res) => {
     } catch (error) {
         next(error);
     }
-}
+};
