@@ -55,21 +55,21 @@ export default function SignUp() {
         <input 
         type='text' 
         placeholder='Username' 
-        className='border p-3 rounded-lg' 
+        className='border border-yellow-500 focus:outline-none p-3 rounded-lg' 
         id='username' 
         onChange={handleChange}/>
 
         <input 
         type='email' 
         placeholder='Email' 
-        className='border p-3 rounded-lg' 
+        className='border border-yellow-500 focus:outline-none p-3 rounded-lg' 
         id='email' 
         onChange={handleChange}/>
 
         <input 
         type='password' 
         placeholder='Password' 
-        className='border p-3 rounded-lg' 
+        className='border border-yellow-500 focus:outline-none p-3 rounded-lg' 
         id='password' 
         onChange={handleChange}/>
 
