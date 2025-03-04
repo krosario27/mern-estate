@@ -249,8 +249,8 @@ export default function Profile() {
       </form>
 
       <div className='flex justify-between mt-5'>
-        <span onClick={handleDeleteUser} className='text-red-700 cursor-pointer'>Delete Account</span>
-        <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>Sign Out</span>
+        <span onClick={handleDeleteUser} className='text-red-700 cursor-pointer hover:opacity-75 font-semibold'>Delete Account</span>
+        <span onClick={handleSignOut} className='text-red-700 cursor-pointer hover:opacity-75 font-semibold'>Sign Out</span>
       </div>
 
       <p className='text-red-700'>{error ? error  : "" }</p>
@@ -258,7 +258,7 @@ export default function Profile() {
         {updateSuccess ? "User updated successfully!" : ""}
       </p>
 
-      <button onClick={handleShowListings} className='text-green-700 w-full'>Show Listings</button>
+      <button onClick={handleShowListings} className='text-green-700 w-full cursor-pointer hover:opacity-75 font-semibold'>Show Listings</button>
       <p className='text-red-700 mt-5'>{showListingsError ? "Error fetching listings" : ""}</p>
 
       {userListings && 
