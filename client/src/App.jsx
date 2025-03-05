@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
+import { useEffect } from 'react'
 import Home from './pages/Home'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
@@ -21,7 +21,7 @@ const PING_INTERVAL = 300000; // Ping every 5 minutes (300,000 ms)
 
 export default function App() {
 
-  
+
   useEffect(() => {
     const pingServer = () => {
       axios.get(BACKEND_URL)
