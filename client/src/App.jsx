@@ -13,7 +13,34 @@ import UpdateListing from './pages/UpdateListing'
 import Listing from './pages/Listing'
 import Search from './pages/Search'
 
+import axios from "axios"; // Import Axios
+
+
+const BACKEND_URL = "https://mern-estate-vr0t.onrender.com"; // Backend URL
+const PING_INTERVAL = 300000; // Ping every 5 minutes (300,000 ms)
+
 export default function App() {
+
+  
+  useEffect(() => {
+    const pingServer = () => {
+      axios.get(BACKEND_URL)
+        .then(response => {
+          console.log(`Ping successful at ${new Date().toISOString()}: ${response.status}`);
+        })
+        .catch(error => {
+          console.error(`Ping failed at ${new Date().toISOString()}:`, error.message);
+        });
+    };
+
+    // Set interval to keep the backend alive
+    const intervalId = setInterval(pingServer, PING_INTERVAL);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+
   return (
     <BrowserRouter>
     <Header />
